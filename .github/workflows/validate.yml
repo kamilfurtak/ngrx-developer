@@ -15,5 +15,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Validate the documentation updater syntax
+        run: node --check scripts/update-ngrx-docs.mjs
       - name: Verify skills CLI discovery
         run: npx --yes skills@1.5.9 add . --list

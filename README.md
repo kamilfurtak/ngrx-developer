@@ -24,6 +24,28 @@ npx skills add kamilfurtak/ngrx-developer --skill ngrx-developer -g -a codex
 npx skills update ngrx-developer -g
 ```
 
+## Documentation maintenance
+
+The repository checks the latest stable `@ngrx/store` version every Monday. When a new version is published, the `Update NgRx documentation` workflow downloads the official guide from the package's `gitHead`, updates the pinned version and commit, validates the skill, and opens a pull request.
+
+Review that pull request before merging it. In particular, reconcile API and migration changes with the curated `skills/ngrx-developer/references/*.md` files. The workflow deliberately does not merge documentation changes automatically.
+
+Run the updater manually when needed:
+
+```bash
+node scripts/update-ngrx-docs.mjs
+```
+
+To validate a specific version and commit without changing the repository:
+
+```bash
+node scripts/update-ngrx-docs.mjs \
+  --version 21.1.1 \
+  --commit fa0780ee1a4ecd0ceead4566c11795041d5f12e4 \
+  --force \
+  --dry-run
+```
+
 ## Included coverage
 
 - `@ngrx/signals`, SignalStore, entity management, RxJS interop, and Events
