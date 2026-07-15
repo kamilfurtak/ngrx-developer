@@ -1,0 +1,4 @@
+interface:
+  display_name: "NgRx Developer"
+  short_description: "Build modern Angular state with NgRx"
+  default_prompt: "Use $ngrx-developer to design and implement NgRx state management for this Angular feature."
