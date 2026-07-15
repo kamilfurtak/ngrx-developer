@@ -1,6 +1,6 @@
 # NgRx Developer Agent Skill
 
-[![skills.sh](https://skills.sh/b/kamilfurtak/ngrx-developer)](https://skills.sh/kamilfurtak/ngrx-developer)
+[![skills.sh](https://img.shields.io/badge/skills.sh-ngrx--developer-111827?style=flat)](https://www.skills.sh/kamilfurtak/ngrx-developer/ngrx-developer)
 
 An agent skill for designing, implementing, reviewing, testing, debugging, and migrating Angular state management with NgRx.
 
