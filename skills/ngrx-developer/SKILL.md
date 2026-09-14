@@ -5,7 +5,7 @@ description: Design, implement, review, test, debug, and migrate Angular state m
 
 # NgRx Developer
 
-Produce version-aware NgRx code that fits the existing Angular application. Use the concise curated references first and the bundled official NgRx 21.1.1 guide snapshot for detail and verification.
+Produce version-aware NgRx code that fits the existing Angular application. Use the concise curated references first and the bundled official NgRx 22.0.1 guide snapshot for detail and verification.
 
 ## Inspect the project first
 
@@ -75,8 +75,8 @@ Resolve paths relative to the skill. Treat NgRx renderer elements such as `ngrx-
 
 ## Snapshot provenance
 
-The official guide snapshot is from `ngrx/platform` commit `fa0780ee1a4ecd0ceead4566c11795041d5f12e4`, package version 21.1.1:
+The official guide snapshot is from `ngrx/platform` commit `a4995391ef631f1bd60d539f436a1aa5c23c4fe5`, package version 22.0.1:
 
-`https://github.com/ngrx/platform/tree/fa0780ee1a4ecd0ceead4566c11795041d5f12e4/projects/www/src/app/pages/guide`
+`https://github.com/ngrx/platform/tree/a4995391ef631f1bd60d539f436a1aa5c23c4fe5/projects/www/src/app/pages/guide`
 
 Retain the bundled [NgRx MIT license](references/ngrx-license.txt) with the snapshot.

@@ -52,7 +52,7 @@ node scripts/update-ngrx-docs.mjs \
 - classic `@ngrx/store`, Effects, selectors, reducers, actions, and Entity
 - ComponentStore, Router Store, NgRx Data, Store DevTools, operators, and schematics
 - NgRx ESLint rules, testing patterns, and version migrations
-- official NgRx 21.1.1 guide snapshot pinned to commit `fa0780ee1a4ecd0ceead4566c11795041d5f12e4`
+- official NgRx 22.0.1 guide snapshot pinned to commit `a4995391ef631f1bd60d539f436a1aa5c23c4fe5`
 
 ## Repository layout
 
