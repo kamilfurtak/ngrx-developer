@@ -15,6 +15,9 @@ is `error`; some rules have autofixes (`ng lint --fix`).
 
 ## Flat config setup (ESLint v9+)
 
+NgRx 22 drops ESLint 8 support and requires flat configuration. See
+`guide/migration/v22.md` before upgrading an older workspace.
+
 ```js
 const tseslint = require('typescript-eslint');
 const ngrx = require('@ngrx/eslint-plugin');

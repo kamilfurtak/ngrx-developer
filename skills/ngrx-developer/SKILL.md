@@ -5,15 +5,15 @@ description: Design, implement, review, test, debug, and migrate Angular state m
 
 # NgRx Developer
 
-Produce version-aware NgRx code that fits the existing Angular application. Use the concise curated references first and the bundled official NgRx 21.1.1 guide snapshot for detail and verification.
+Produce version-aware NgRx code that fits the existing Angular application. Use the concise curated references first and the bundled official NgRx 22.0.1 guide snapshot for detail and verification.
 
 ## Inspect the project first
 
 1. Read `package.json` and workspace configuration before recommending or changing code.
 2. Determine the Angular and every installed `@ngrx/*` version, package manager, test runner, and whether the workspace uses Nx.
 3. Search for existing Store, SignalStore, ComponentStore, provider, action, selector, effect, and test patterns. Preserve established conventions unless the user requests a migration.
-4. Treat `references/guide/` as authoritative for NgRx 21.1.1. If a curated reference conflicts with the snapshot, the snapshot wins.
-5. For another major version, inspect the matching `references/guide/migration/` files and installed package typings or source. Never emit an API merely because it exists in the snapshot.
+4. Treat `references/guide/` as the upstream snapshot for the version recorded in `references/ngrx-source.json`. Preserve its provenance, but verify examples against package typings when they appear inconsistent; curated references may flag known snapshot typos.
+5. NgRx 22 requires Angular/CLI 22 and TypeScript 6.0; check `references/guide/migration/v22.md` before upgrading. For another major version, inspect the matching `references/guide/migration/` files and installed package typings or source. Never emit an API merely because it exists in the snapshot.
 6. If current or post-snapshot behavior is required, consult current official NgRx sources and distinguish that information from the bundled snapshot.
 
 ## Choose the state surface deliberately
@@ -75,8 +75,8 @@ Resolve paths relative to the skill. Treat NgRx renderer elements such as `ngrx-
 
 ## Snapshot provenance
 
-The official guide snapshot is from `ngrx/platform` commit `fa0780ee1a4ecd0ceead4566c11795041d5f12e4`, package version 21.1.1:
+The official guide snapshot is from `ngrx/platform` commit `a4995391ef631f1bd60d539f436a1aa5c23c4fe5`, package version 22.0.1:
 
-`https://github.com/ngrx/platform/tree/fa0780ee1a4ecd0ceead4566c11795041d5f12e4/projects/www/src/app/pages/guide`
+`https://github.com/ngrx/platform/tree/a4995391ef631f1bd60d539f436a1aa5c23c4fe5/projects/www/src/app/pages/guide`
 
 Retain the bundled [NgRx MIT license](references/ngrx-license.txt) with the snapshot.

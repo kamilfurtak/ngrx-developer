@@ -47,7 +47,7 @@ userState.user.firstName;  // Signal<string>
 userState.isAdmin;         // Signal<boolean>
 ```
 
-Union-type semantics match SignalStore: a `DeepSignal` per object-literal member, primitives stay
+From NgRx 22, union-type semantics match SignalStore (see `guide/migration/v22.md`): a `DeepSignal` per object-literal member, primitives stay
 `Signal`; narrow with `in`. Arrays/primitives live on properties, not at the root (ESLint:
 `signal-state-no-arrays-at-root-level`).
 
@@ -144,6 +144,17 @@ constructor() {
 }
 ```
 
+NgRx 22 removes the callback-style `tapResponse(next, error, complete)` overload.
+Use the object form shown above; see `guide/migration/v22.md`.
+
 Choosing the flattening operator: `switchMap` to cancel the previous request (typeahead),
 `concatMap` to preserve order, `exhaustMap` to ignore new triggers while one is in flight (submit
 buttons), `mergeMap` for full concurrency.
+
+## Resource extensions (experimental)
+
+The NgRx 22 snapshot introduces `@ngrx/signals/resource` helpers for preserving
+previous values or supplying fallbacks during resource loading/errors. Read
+`guide/signals/resource-extensions.md` for `extendResource` and scoped
+`provideResourceExtensions`; these APIs are experimental, not a default
+replacement for existing `rxMethod` flows. Confirm installed package support.

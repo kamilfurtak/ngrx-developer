@@ -194,3 +194,8 @@ Classic entity management. `createEntityAdapter<T>()` gives an `EntityState<T>` 
 `entities` map) and CRUD adapter methods (`addOne`, `setAll`, `updateOne`, `upsertMany`,
 `removeOne`, …) used inside reducers, plus `adapter.getSelectors()` for `selectAll`, `selectEntities`,
 `selectIds`, `selectTotal`. In Signals code, prefer `@ngrx/signals/entities` (`entities.md`).
+
+NgRx 22 infers `adapter.selectId` return types from the configured selector.
+The bundled `guide/migration/v22.md` example declares `referenceId` but later
+uses `user.uid`; use the actual declared `user.referenceId` property instead.
+The upstream snapshot is retained verbatim for provenance.

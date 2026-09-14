@@ -104,7 +104,7 @@ template: `
 `
 ```
 
-**Union types.** When a slice's type is a union, `signalStore` creates a `DeepSignal` for each
+**Union types (NgRx 22+).** When a slice's type is a union, `signalStore` creates a `DeepSignal` for each
 object-literal member; primitives / dynamic records stay a regular `Signal`. Narrow with `in`
 before drilling in:
 
@@ -320,6 +320,11 @@ export const BooksStore = signalStore(
   })),
 );
 ```
+
+For extracting a feature factory's state and members into another feature's input,
+see `SignalStoreFeatureType` in
+`guide/signals/signal-store/custom-store-features.md`. Confirm availability in
+the installed NgRx version before using it.
 
 ### Features with required input
 
