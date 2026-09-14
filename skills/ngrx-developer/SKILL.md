@@ -12,8 +12,8 @@ Produce version-aware NgRx code that fits the existing Angular application. Use 
 1. Read `package.json` and workspace configuration before recommending or changing code.
 2. Determine the Angular and every installed `@ngrx/*` version, package manager, test runner, and whether the workspace uses Nx.
 3. Search for existing Store, SignalStore, ComponentStore, provider, action, selector, effect, and test patterns. Preserve established conventions unless the user requests a migration.
-4. Treat `references/guide/` as authoritative for NgRx 21.1.1. If a curated reference conflicts with the snapshot, the snapshot wins.
-5. For another major version, inspect the matching `references/guide/migration/` files and installed package typings or source. Never emit an API merely because it exists in the snapshot.
+4. Treat `references/guide/` as the upstream snapshot for the version recorded in `references/ngrx-source.json`. Preserve its provenance, but verify examples against package typings when they appear inconsistent; curated references may flag known snapshot typos.
+5. NgRx 22 requires Angular/CLI 22 and TypeScript 6.0; check `references/guide/migration/v22.md` before upgrading. For another major version, inspect the matching `references/guide/migration/` files and installed package typings or source. Never emit an API merely because it exists in the snapshot.
 6. If current or post-snapshot behavior is required, consult current official NgRx sources and distinguish that information from the bundled snapshot.
 
 ## Choose the state surface deliberately
