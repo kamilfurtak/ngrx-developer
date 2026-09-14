@@ -28,6 +28,17 @@ npx skills update ngrx-developer -g
 
 The repository checks the latest stable `@ngrx/store` version every Monday. When a new version is published, the `Update NgRx documentation` workflow downloads the official guide from the package's `gitHead`, updates the pinned version and commit, validates the skill, and opens a pull request.
 
+The repository must enable **Settings → Actions → General → Workflow permissions →
+Allow GitHub Actions to create and approve pull requests**. The default token permission
+can remain read-only: this updater explicitly requests `contents: write` and
+`pull-requests: write` only for its job. Without the repository setting, generation
+succeeds but GitHub rejects PR creation. Do not add a personal access token to work
+around that setting.
+
+To verify the whole path, dispatch `Update NgRx documentation` and inspect every step,
+including **Open the documentation update pull request**. A successful download alone
+is not a successful update. An unchanged snapshot legitimately produces no new PR.
+
 Review that pull request before merging it. In particular, reconcile API and migration changes with the curated `skills/ngrx-developer/references/*.md` files. The workflow deliberately does not merge documentation changes automatically.
 
 Run the updater manually when needed:
